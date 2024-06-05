@@ -1,8 +1,14 @@
 'use client';
 
-import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import {
+  ReactNode,
+  RefObject,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import sectionNavigationContext from './sectionNavigationContext';
-import { SectionMap, SectionRef } from './types';
 
 export interface SectionNavigationProviderProps {
   children: ReactNode;
@@ -41,7 +47,9 @@ export default function SectionNavigationProvider({
   children,
 }: SectionNavigationProviderProps) {
   // Use ref rather than state to avoid unnecessary rerenders
-  const sectionMapRef = useRef<SectionMap>({});
+  const sectionMapRef = useRef<Record<string, RefObject<HTMLElement | null>>>(
+    {}
+  );
   const [activeSection, setActiveSection] = useState('');
 
   const updateActiveSection = useCallback(() => {
@@ -63,7 +71,7 @@ export default function SectionNavigationProvider({
   }, [setActiveSection, sectionMapRef]);
 
   const registerSection = useCallback(
-    (sectionId: string, sectionRef: SectionRef) => {
+    (sectionId: string, sectionRef: RefObject<HTMLElement | null>) => {
       sectionMapRef.current[sectionId] = sectionRef;
       updateActiveSection();
     },

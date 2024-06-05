@@ -1,10 +1,12 @@
-import { createContext, Ref } from 'react';
-import { SectionNavigationContext } from './types';
+import { createContext, RefObject } from 'react';
 
-const sectionNavigationContext: SectionNavigationContext = createContext({
-  registerSection: (_sectionId, _sectionRef) => {},
-  deregisterSection: (_sectionId) => {},
-  navigateToSectionIfRegistered: (_sectionId) => false,
+const sectionNavigationContext = createContext({
+  registerSection: (
+    sectionId: string,
+    sectionRef: RefObject<HTMLElement | null>
+  ) => {},
+  deregisterSection: (sectionId: string) => {},
+  navigateToSectionIfRegistered: (sectionId: string): boolean => false,
   activeSection: '',
 });
 
