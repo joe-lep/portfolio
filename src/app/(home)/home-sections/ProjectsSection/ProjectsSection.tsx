@@ -3,12 +3,40 @@ import { NavigableSection } from '@/components/section-navigation';
 import SectionSubHeader from '@/components/SectionSubHeader';
 import LibraryEntry from './LibraryEntry';
 import SqueezeContainer from '@/components/SqueezeContainer';
+import AppEntry from './AppEntry';
 
 export default function ProjectsSection() {
   return (
     <NavigableSection id="projects">
       <SectionHeader>Projects</SectionHeader>
-      {/* <SectionSubHeader>Libraries</SectionSubHeader> */}
+      <SectionSubHeader>Web Applications</SectionSubHeader>
+      <AppEntry
+        title="React Minesweeper"
+        siteUrl="https://joe-lep.github.io/react-minesweeper/"
+        githubUrl="https://github.com/joe-lep/react-minesweeper"
+      >
+        <SqueezeContainer>
+          <p className="mb-4">
+            A minesweeper clone built in React.
+            Upon landing on the application page, the user is presented with a modal to either use a preset difficulty configuration that will set the width and height of the game's grid, as well as the number of mines.
+            Alternatively, the user can specify a custom width, height, and mine count for the game.
+            The user is also presented with a button to display the rules of the game as well as the controls for the applicaiton.
+          </p>
+          <p className="mb-4">
+            Once the user has configured the game&apos;s difficulty and clicked the game start button, the game begins.
+            The user can click on cells in the grid to switch them to a revealed state or right click to mark cells with flags. 
+            The game enters a win state if the user reveals all non-mine cells, or it enters a loss state if the user clicks on a cell with a mine.
+            A stopwatch component keeps track of the time the user spends playing the game, and it pauses whenever the game enters its win or loss state.
+            The user can bring up the difficulty config modal at any time by pressing the New Game button to start a new game with a new layout.
+          </p>
+          <p>
+            This applicaiton makes good use of React Hooks to manage complex game state and logical interactions.
+            It is designed to be responsive with support for both desktop and mobile layouts, as well as both mouse and touch controls.
+            It uses SASS for more complex styling rules.
+          </p>
+        </SqueezeContainer>
+      </AppEntry>
+      <SectionSubHeader>Libraries</SectionSubHeader>
       <LibraryEntry
         title="React Dialog Manager"
         githubUrl="https://github.com/joe-lep/react-dialog-manager"
