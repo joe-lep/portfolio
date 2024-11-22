@@ -18,7 +18,7 @@ export default function ProjectsSection() {
         <SqueezeContainer>
           <p className="mb-4">
             A minesweeper clone built in React.
-            Upon landing on the application page, the user is presented with a modal to either use a preset difficulty configuration that will set the width and height of the game's grid, as well as the number of mines.
+            Upon landing on the application page, the user is presented with a modal to either use a preset difficulty configuration that will set the width and height of the game&apos;s grid, as well as the number of mines.
             Alternatively, the user can specify a custom width, height, and mine count for the game.
             The user is also presented with a button to display the rules of the game as well as the controls for the applicaiton.
           </p>
