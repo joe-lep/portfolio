@@ -44,3 +44,18 @@ button {
 .checked .darkmode-toggle-switch {
   transform: translate(32px, -50%);
 }
+
+.carousel {
+  overflow: hidden;
+}
+
+.carousel--container {
+  display: flex;
+}
+
+.carousel--slide {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 100%;
+  min-width: 0;
+}

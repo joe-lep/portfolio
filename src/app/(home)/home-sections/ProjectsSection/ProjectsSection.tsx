@@ -4,6 +4,26 @@ import SectionSubHeader from '@/components/SectionSubHeader';
 import LibraryEntry from './LibraryEntry';
 import SqueezeContainer from '@/components/SqueezeContainer';
 import AppEntry from './AppEntry';
+import Carousel from '@/components/Carousel';
+
+import MinesweeperInProgress from '/public/react-minesweeper--game-in-progress.png';
+import MinesweeperWon from '/public/react-minesweeper--win-state.png';
+import MinesweeperLost from '/public/react-minesweeper--loss-state.png';
+
+const images = [
+  {
+    imageData: MinesweeperInProgress,
+    alt: 'A game of React Minesweeper being played',
+  },
+  {
+    imageData: MinesweeperWon,
+    alt: 'A game of React Minesweeper after the player has won',
+  },
+  {
+    imageData: MinesweeperLost,
+    alt: 'A game of React Minesweeper after the player has lost',
+  },
+];
 
 export default function ProjectsSection() {
   return (
@@ -15,6 +35,7 @@ export default function ProjectsSection() {
         siteUrl="https://joe-lep.github.io/react-minesweeper/"
         githubUrl="https://github.com/joe-lep/react-minesweeper"
       >
+        <Carousel images={images} />
         <SqueezeContainer>
           <p className="mb-4">
             A minesweeper clone built in React.
