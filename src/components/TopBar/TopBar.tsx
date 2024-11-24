@@ -28,7 +28,7 @@ export default function TopBar() {
   }, [showMenu, setShowMenu, setTransitioning]);
 
   return (
-    <div className="sticky top-0 flex flex-row items-center justify-between gap-2 bg-gradient-to-b from-violet-900 to-violet-950 px-4 py-4 text-white shadow-lg">
+    <div className="sticky top-0 flex flex-row items-center justify-between gap-2 bg-gradient-to-b from-violet-900 to-violet-950 px-4 py-4 text-white shadow-lg z-50">
       <div>
         <HeaderBrand />
       </div>
