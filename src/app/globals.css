@@ -44,3 +44,54 @@ button {
 .checked .darkmode-toggle-switch {
   transform: translate(32px, -50%);
 }
+
+.swiper {
+  user-select: none;
+  max-width: calc(100vw - 64px);
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.dark .swiper-pagination-bullet {
+  box-shadow: 0 0 0 2px white;
+}
+
+.swiper img {
+  max-height: 360px;
+}
+
+.swiper-slide {
+  height: 360px !important;
+}
+
+@media (min-width: 768px) {
+  .swiper img {
+    max-height: 480px;
+  }
+
+  .swiper-slide {
+    height: 480px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .swiper img {
+    max-height: 560px;
+  }
+
+  .swiper-slide {
+    height: 560px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+.swiper img {
+    max-height: 640px;
+  }
+
+  .swiper-slide {
+    height: 640px !important;
+  }
+}
